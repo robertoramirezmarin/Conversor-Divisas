@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conversor de Divisas - Actividad Final</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <div id="page-wrapper" class="fade-in">
+
+        <main class="container">
+            <h1>CONVERSOR DE DIVISAS</h1>
+            
+            <div class="converter-card">
+                
+                <form id="converter-form" novalidate>
+                    <div class="form-grid">
+                        
+                        <div class="input-section from-section">
+                            <label for="amount">Cantidad</label>
+                            <div class="input-row">
+                                <input type="number" id="amount" required step="0.01">
+                                <select id="from-currency" required></select>
+                            </div>
+                            <span class="error-message" id="amount-error"></span>
+                        </div>
+
+                        <div class="swap-section">
+                            <button type="button" id="swap-btn" title="Intercambiar divisas">
+                                <i class="fas fa-arrows-up-down"></i>
+                            </button>
+                        </div>
+
+                        <div class="input-section to-section">
+                            <label for="to-currency">Se convierte a</label>
+                            <div class="input-row">
+                                <input type="text" id="final-result-display" readonly>
+                                <select id="to-currency" required></select>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <button type="submit" id="convert-btn">Calcular Conversión</button>
+                </form>
+
+                <div id="loading" class="hidden">Consultando tasas reales...</div>
+            </div>
+
+            <div id="result-container" class="hidden">
+                <h2 id="result-text"></h2>
+            </div>
+        </main>
+
+        <footer>
+            <div class="footer-content container">
+                <p>&copy; 2026 Actividad Final desarrollada por: Roberto Ramirez Marin</p>
+            </div>
+        </footer>
+
+    </div>
+
+    <script src="env/config.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
